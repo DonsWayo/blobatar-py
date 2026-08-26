@@ -8,7 +8,7 @@ which path primitive traces it.
 Three critical function signatures need special handling to achieve parity with
 the JavaScript version:
 
-1. `_r2()` must round to 2 decimal places and stringify correctly, handling
+1. `round2()` must round to 2 decimal places and stringify correctly, handling
    negative zero (which JavaScript distinguishes from positive zero but Python's
    `str()` does not).
 2. Path functions must accumulate strings carefully: each coordinate appended
@@ -19,6 +19,8 @@ the JavaScript version:
 from dataclasses import dataclass
 from typing import Optional
 import math
+
+from ._js import round2
 
 
 @dataclass(frozen=True)
@@ -53,21 +55,6 @@ class Polygon:
     rot: float = 0
 
 
-def _r2(v: float) -> str:
-    """Round to 2 decimal places and stringify, handling negative zero.
-
-    JavaScript's Object.is(x, -0) distinguishes negative zero from positive
-    zero; Python's str() does not. We must normalize -0.0 to "0" to match.
-    JavaScript's String() also strips the .0 from integer-valued floats.
-    """
-    s = round(v * 100) / 100
-    # Check if s is exactly -0.0 (equals 0 but has negative sign bit).
-    if s == 0 and math.copysign(1, s) == -1:
-        return "0"
-    # Strip trailing .0 for integer-valued floats, to match JavaScript's String()
-    if s == int(s):
-        return str(int(s))
-    return str(s)
 
 
 def superellipse(se: Superellipse) -> str:
@@ -102,7 +89,7 @@ def superellipse(se: Superellipse) -> str:
     def at(i: int) -> str:
         """Transform and stringify a control point."""
         x, y = pts[i]
-        return f"{_r2(se.cx + x * cos_t - y * sin_t)} {_r2(se.cy + x * sin_t + y * cos_t)}"
+        return f"{round2(se.cx + x * cos_t - y * sin_t)} {round2(se.cy + x * sin_t + y * cos_t)}"
 
     d = f"M{at(0)}"
     for i in range(1, 13, 3):
@@ -115,7 +102,7 @@ def arc(cx: float, cy: float, w: float, depth: float) -> str:
 
     A closed superellipse would need a boolean subtraction to get the same read.
     """
-    return f"M{_r2(cx - w)} {_r2(cy)}Q{_r2(cx)} {_r2(cy + depth)} {_r2(cx + w)} {_r2(cy)}"
+    return f"M{round2(cx - w)} {round2(cy)}Q{round2(cx)} {round2(cy + depth)} {round2(cx + w)} {round2(cy)}"
 
 
 def blob_path(
@@ -145,7 +132,7 @@ def blob_path(
         """Cyclic index into the point array."""
         return p[((i % n) + n) % n]
 
-    d = f"M{_r2(at(0)[0])} {_r2(at(0)[1])}"
+    d = f"M{round2(at(0)[0])} {round2(at(0)[1])}"
 
     for i in range(n):
         x0, y0 = at(i - 1)
@@ -153,9 +140,9 @@ def blob_path(
         x2, y2 = at(i + 1)
         x3, y3 = at(i + 2)
         d += (
-            f"C{_r2(x1 + (x2 - x0) / 6)} {_r2(y1 + (y2 - y0) / 6)}"
-            f" {_r2(x2 - (x3 - x1) / 6)} {_r2(y2 - (y3 - y1) / 6)}"
-            f" {_r2(x2)} {_r2(y2)}"
+            f"C{round2(x1 + (x2 - x0) / 6)} {round2(y1 + (y2 - y0) / 6)}"
+            f" {round2(x2 - (x3 - x1) / 6)} {round2(y2 - (y3 - y1) / 6)}"
+            f" {round2(x2)} {round2(y2)}"
         )
 
     return d + "Z"
@@ -188,12 +175,12 @@ def polygon(poly: Polygon) -> str:
         """The cut point on the edge leaving vertex `i` toward vertex `j`."""
         x0, y0 = at(i)
         x1, y1 = at(j)
-        return f"{_r2(x0 + (x1 - x0) * k)} {_r2(y0 + (y1 - y0) * k)}"
+        return f"{round2(x0 + (x1 - x0) * k)} {round2(y0 + (y1 - y0) * k)}"
 
     d = f"M{cut(0, -1)}"
     for i in range(poly.sides):
         x, y = at(i)
-        d += f"Q{_r2(x)} {_r2(y)} {cut(i, i + 1)}"
+        d += f"Q{round2(x)} {round2(y)} {cut(i, i + 1)}"
         # The straight run to the next corner's cut. Omitted when the cuts meet,
         # so a fully rounded polygon does not emit `sides` zero-length lines.
         if k < 0.5:
@@ -209,9 +196,9 @@ def box(cx: float, cy: float, rx: float, ry: float) -> str:
     union is an exact stadium: the box reaches full height everywhere, so
     each cap meets it along its own diameter and there is no crease.
     """
-    l = _r2(cx - rx)
-    r = _r2(cx + rx)
-    return f"M{l} {_r2(cy - ry)}H{r}V{_r2(cy + ry)}H{l}Z"
+    l = round2(cx - rx)
+    r = round2(cx + rx)
+    return f"M{l} {round2(cy - ry)}H{r}V{round2(cy + ry)}H{l}Z"
 
 
 def taper(cx: float, cy: float, rx: float, ry: float, tip: float) -> str:
@@ -234,8 +221,8 @@ def taper(cx: float, cy: float, rx: float, ry: float, tip: float) -> str:
     px = tx * 0.14
     py = ty + 0.86 * (apex - ty)
     return (
-        f"M{_r2(cx - tx)} {_r2(ty)}"
-        f"L{_r2(cx - px)} {_r2(py)}"
-        f"Q{_r2(cx)} {_r2(apex)} {_r2(cx + px)} {_r2(py)}"
-        f"L{_r2(cx + tx)} {_r2(ty)}Z"
+        f"M{round2(cx - tx)} {round2(ty)}"
+        f"L{round2(cx - px)} {round2(py)}"
+        f"Q{round2(cx)} {round2(apex)} {round2(cx + px)} {round2(py)}"
+        f"L{round2(cx + tx)} {round2(ty)}Z"
     )

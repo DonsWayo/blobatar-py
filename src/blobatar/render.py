@@ -112,7 +112,7 @@ def posed(
     return {"l": result["l"], "wrap": result.get("wrap", "")}
 
 
-def tinted(p: dict[str, str], e: Optional[Any] = None) -> dict[str, str]:
+def apply_tint(p: dict[str, str], e: Optional[Any] = None) -> dict[str, str]:
     """Applies a pose's tint, if it has one.
 
     Called on the static path only, for the mirror-image of the reason `posed`
@@ -206,7 +206,7 @@ def make_blobatar(style: Any) -> Callable[[str, Optional[BlobatarOptions]], str]
         t = resolved["t"]
         palette = resolved["palette"]
 
-        p = tinted(palette, opts.expression)
+        p = apply_tint(palette, opts.expression)
         dim = f' width="{opts.size}" height="{opts.size}"' if opts.size else ""
         pose = posed(style["layout"](t), opts)
 

@@ -68,3 +68,24 @@ def js_num(x: float) -> str:
     if x == int(x) and abs(x) < 1e21:
         return str(int(x))
     return repr(x)
+
+
+def round2(v: float) -> str:
+    """Round to two decimals and stringify, the way JavaScript would.
+
+    Used for every coordinate that ends up in an SVG path or a CSS value. Three
+    separate divergences meet in this one function, which is why it lives here
+    instead of being reimplemented per module:
+
+    - `Math.round` rounds ties toward +Infinity; Python's `round` rounds to even,
+      so `round(0.125 * 100)` is 12 in Python and 13 in JavaScript.
+    - `String(1)` is `"1"` where `str(1.0)` is `"1.0"`.
+    - JavaScript distinguishes `-0` from `0` but prints the former as `"0"`;
+      Python's `str(-0.0)` gives `"-0.0"`.
+    """
+    s = js_round(v * 100) / 100
+    if s == 0:
+        return "0"
+    if s == int(s):
+        return str(int(s))
+    return str(s)

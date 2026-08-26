@@ -6,6 +6,8 @@ module owns the shared body, eyes and SVG serialization.
 """
 
 import math
+
+from ._js import round2
 from dataclasses import dataclass
 from typing import Callable, Optional, Union, List, TypedDict, Any
 from .shape import superellipse, Superellipse
@@ -127,14 +129,6 @@ class Layout(TypedDict, total=False):
     eyes: list[Eye]
 
 
-def _r2(v: float) -> str:
-    """Round to 2 decimal places, JavaScript style."""
-    s = round(v * 100) / 100
-    if s == 0 and math.copysign(1, s) == -1:
-        return "0"
-    if s == int(s):
-        return str(int(s))
-    return str(s)
 
 
 def compose(bands: list[Band], fit: Fit) -> dict[str, Any]:
@@ -192,7 +186,7 @@ def compose(bands: list[Band], fit: Fit) -> dict[str, Any]:
             """Render an eye."""
             path = f'<path d="{superellipse(Superellipse(e.cx, e.cy, e.rx, e.ry, e.n, e.rot))}"/>'
             if mo:
-                return f'<g class="mo-eye" style="--mo-wrap:{1 if i else -1};--mo-lean:{_r2(e.rot)};transform-origin:{_r2(e.cx)}px {_r2(e.cy)}px">{path}</g>'
+                return f'<g class="mo-eye" style="--mo-wrap:{1 if i else -1};--mo-lean:{round2(e.rot)};transform-origin:{round2(e.cx)}px {round2(e.cy)}px">{path}</g>'
             return path
 
         body_dict = l["body"]
@@ -203,7 +197,7 @@ def compose(bands: list[Band], fit: Fit) -> dict[str, Any]:
 
         body = (
             f'<g fill="{p.get("head", "")}">'
-            + "".join(f'<circle cx="{_r2(d["cx"])}" cy="{_r2(d["cy"])}" r="{_r2(d["r"])}"/>' for d in l.get("petals", []))
+            + "".join(f'<circle cx="{round2(d["cx"])}" cy="{round2(d["cy"])}" r="{round2(d["r"])}"/>' for d in l.get("petals", []))
             + "".join(f'<path d="{d}"/>' for d in l.get("extra", []))
             + f'<path d="{body_path}"/>'
             + '</g>'
@@ -228,12 +222,6 @@ def marks(l: Layout, p: dict[str, str]) -> list[Mark]:
 
     def r2(v: float) -> str:
         """Round to 2 decimal places."""
-        s = round(v * 100) / 100
-        if s == 0 and math.copysign(1, s) == -1:
-            return "0"
-        if s == int(s):
-            return str(int(s))
-        return str(s)
 
     head = p.get("head", "")
     result: list[Mark] = []
