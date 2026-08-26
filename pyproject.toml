@@ -1,5 +1,5 @@
 [project]
-name = "blobatar-py"
+name = "blobatar"
 version = "0.0.1"
 description = "Python port of blobatar — deterministic geometric avatars from any string"
 readme = "README.md"

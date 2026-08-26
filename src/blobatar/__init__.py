@@ -1,4 +1,4 @@
-"""blobatar-py — Python port of blobatar.
+"""blobatar — Python port of blobatar.
 
 Deterministic geometric avatars from any string. The same input always yields
 the same output, byte for byte, matching the original JavaScript implementation.

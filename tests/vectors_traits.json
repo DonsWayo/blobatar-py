@@ -1,0 +1,614 @@
+[
+ {
+  "seed": "alain",
+  "base": {
+   "hue": 0.315505497623235,
+   "shape": 0.1506984510924667,
+   "eyes": 0.1396120199933648,
+   "mouth": 0.7814586302265525,
+   "expression": 0.7791038900613785,
+   "tilt": 0.297005896223709
+  },
+  "num": {
+   "hue": 0.35240439809858803,
+   "shape": 0.2205587608739734,
+   "eyes": 0.21168961599469185,
+   "mouth": 0.725166904181242,
+   "expression": 0.7232831120491028,
+   "tilt": 0.3376047169789672
+  },
+  "int": {
+   "hue": 4,
+   "shape": 2,
+   "eyes": 2,
+   "mouth": 8,
+   "expression": 8,
+   "tilt": 3
+  },
+  "pick": {
+   "hue": "square",
+   "shape": "round",
+   "eyes": "round",
+   "mouth": "star",
+   "expression": "star",
+   "tilt": "square"
+  },
+  "bool": {
+   "hue": true,
+   "shape": true,
+   "eyes": true,
+   "mouth": false,
+   "expression": false,
+   "tilt": true
+  },
+  "jitter": {
+   "hue": -0.184494502376765,
+   "shape": -0.3493015489075333,
+   "eyes": -0.3603879800066352,
+   "mouth": 0.2814586302265525,
+   "expression": 0.2791038900613785,
+   "tilt": -0.202994103776291
+  }
+ },
+ {
+  "seed": "alaim",
+  "base": {
+   "hue": 0.5826109503395855,
+   "shape": 0.08031479711644351,
+   "eyes": 0.37235641735605896,
+   "mouth": 0.6632126704789698,
+   "expression": 0.8478817725554109,
+   "tilt": 0.7734503168612719
+  },
+  "num": {
+   "hue": 0.5660887602716684,
+   "shape": 0.16425183769315482,
+   "eyes": 0.39788513388484714,
+   "mouth": 0.6305701363831758,
+   "expression": 0.7783054180443287,
+   "tilt": 0.7187602534890175
+  },
+  "int": {
+   "hue": 6,
+   "shape": 1,
+   "eyes": 4,
+   "mouth": 7,
+   "expression": 9,
+   "tilt": 8
+  },
+  "pick": {
+   "hue": "triangle",
+   "shape": "round",
+   "eyes": "square",
+   "mouth": "triangle",
+   "expression": "star",
+   "tilt": "star"
+  },
+  "bool": {
+   "hue": false,
+   "shape": true,
+   "eyes": true,
+   "mouth": false,
+   "expression": false,
+   "tilt": false
+  },
+  "jitter": {
+   "hue": 0.08261095033958554,
+   "shape": -0.4196852028835565,
+   "eyes": -0.12764358264394104,
+   "mouth": 0.1632126704789698,
+   "expression": 0.34788177255541086,
+   "tilt": 0.27345031686127186
+  }
+ },
+ {
+  "seed": "",
+  "base": {
+   "hue": 0.008314496837556362,
+   "shape": 0.5592523962259293,
+   "eyes": 0.5034790008794516,
+   "mouth": 0.37426755065098405,
+   "expression": 0.7917939790058881,
+   "tilt": 0.07092854660004377
+  },
+  "num": {
+   "hue": 0.1066515974700451,
+   "shape": 0.5474019169807435,
+   "eyes": 0.5027832007035613,
+   "mouth": 0.3994140405207872,
+   "expression": 0.7334351832047105,
+   "tilt": 0.15674283728003502
+  },
+  "int": {
+   "hue": 1,
+   "shape": 6,
+   "eyes": 6,
+   "mouth": 4,
+   "expression": 8,
+   "tilt": 1
+  },
+  "pick": {
+   "hue": "round",
+   "shape": "triangle",
+   "eyes": "triangle",
+   "mouth": "square",
+   "expression": "star",
+   "tilt": "round"
+  },
+  "bool": {
+   "hue": true,
+   "shape": false,
+   "eyes": false,
+   "mouth": true,
+   "expression": false,
+   "tilt": true
+  },
+  "jitter": {
+   "hue": -0.49168550316244364,
+   "shape": 0.05925239622592926,
+   "eyes": 0.0034790008794516325,
+   "mouth": -0.12573244934901595,
+   "expression": 0.2917939790058881,
+   "tilt": -0.4290714533999562
+  }
+ },
+ {
+  "seed": "a",
+  "base": {
+   "hue": 0.4339382159523666,
+   "shape": 0.48258565133437514,
+   "eyes": 0.272954877698794,
+   "mouth": 0.5043390917126089,
+   "expression": 0.7044564851094037,
+   "tilt": 0.671396778896451
+  },
+  "num": {
+   "hue": 0.4471505727618933,
+   "shape": 0.4860685210675001,
+   "eyes": 0.3183639021590352,
+   "mouth": 0.5034712733700871,
+   "expression": 0.663565188087523,
+   "tilt": 0.6371174231171608
+  },
+  "int": {
+   "hue": 5,
+   "shape": 5,
+   "eyes": 3,
+   "mouth": 6,
+   "expression": 8,
+   "tilt": 7
+  },
+  "pick": {
+   "hue": "square",
+   "shape": "square",
+   "eyes": "square",
+   "mouth": "triangle",
+   "expression": "triangle",
+   "tilt": "triangle"
+  },
+  "bool": {
+   "hue": true,
+   "shape": true,
+   "eyes": true,
+   "mouth": false,
+   "expression": false,
+   "tilt": false
+  },
+  "jitter": {
+   "hue": -0.06606178404763341,
+   "shape": -0.017414348665624857,
+   "eyes": -0.227045122301206,
+   "mouth": 0.0043390917126089334,
+   "expression": 0.20445648510940373,
+   "tilt": 0.171396778896451
+  }
+ },
+ {
+  "seed": "ALAIN",
+  "base": {
+   "hue": 0.315505497623235,
+   "shape": 0.1506984510924667,
+   "eyes": 0.1396120199933648,
+   "mouth": 0.7814586302265525,
+   "expression": 0.7791038900613785,
+   "tilt": 0.297005896223709
+  },
+  "num": {
+   "hue": 0.35240439809858803,
+   "shape": 0.2205587608739734,
+   "eyes": 0.21168961599469185,
+   "mouth": 0.725166904181242,
+   "expression": 0.7232831120491028,
+   "tilt": 0.3376047169789672
+  },
+  "int": {
+   "hue": 4,
+   "shape": 2,
+   "eyes": 2,
+   "mouth": 8,
+   "expression": 8,
+   "tilt": 3
+  },
+  "pick": {
+   "hue": "square",
+   "shape": "round",
+   "eyes": "round",
+   "mouth": "star",
+   "expression": "star",
+   "tilt": "square"
+  },
+  "bool": {
+   "hue": true,
+   "shape": true,
+   "eyes": true,
+   "mouth": false,
+   "expression": false,
+   "tilt": true
+  },
+  "jitter": {
+   "hue": -0.184494502376765,
+   "shape": -0.3493015489075333,
+   "eyes": -0.3603879800066352,
+   "mouth": 0.2814586302265525,
+   "expression": 0.2791038900613785,
+   "tilt": -0.202994103776291
+  }
+ },
+ {
+  "seed": "  alain  ",
+  "base": {
+   "hue": 0.315505497623235,
+   "shape": 0.1506984510924667,
+   "eyes": 0.1396120199933648,
+   "mouth": 0.7814586302265525,
+   "expression": 0.7791038900613785,
+   "tilt": 0.297005896223709
+  },
+  "num": {
+   "hue": 0.35240439809858803,
+   "shape": 0.2205587608739734,
+   "eyes": 0.21168961599469185,
+   "mouth": 0.725166904181242,
+   "expression": 0.7232831120491028,
+   "tilt": 0.3376047169789672
+  },
+  "int": {
+   "hue": 4,
+   "shape": 2,
+   "eyes": 2,
+   "mouth": 8,
+   "expression": 8,
+   "tilt": 3
+  },
+  "pick": {
+   "hue": "square",
+   "shape": "round",
+   "eyes": "round",
+   "mouth": "star",
+   "expression": "star",
+   "tilt": "square"
+  },
+  "bool": {
+   "hue": true,
+   "shape": true,
+   "eyes": true,
+   "mouth": false,
+   "expression": false,
+   "tilt": true
+  },
+  "jitter": {
+   "hue": -0.184494502376765,
+   "shape": -0.3493015489075333,
+   "eyes": -0.3603879800066352,
+   "mouth": 0.2814586302265525,
+   "expression": 0.2791038900613785,
+   "tilt": -0.202994103776291
+  }
+ },
+ {
+  "seed": "José",
+  "base": {
+   "hue": 0.3816042938269675,
+   "shape": 0.4017309059854597,
+   "eyes": 0.4558323184028268,
+   "mouth": 0.4715839570853859,
+   "expression": 0.3489111496601254,
+   "tilt": 0.5379300352651626
+  },
+  "num": {
+   "hue": 0.40528343506157405,
+   "shape": 0.42138472478836775,
+   "eyes": 0.4646658547222614,
+   "mouth": 0.47726716566830873,
+   "expression": 0.37912891972810037,
+   "tilt": 0.5303440282121301
+  },
+  "int": {
+   "hue": 4,
+   "shape": 5,
+   "eyes": 5,
+   "mouth": 5,
+   "expression": 4,
+   "tilt": 6
+  },
+  "pick": {
+   "hue": "square",
+   "shape": "square",
+   "eyes": "square",
+   "mouth": "square",
+   "expression": "square",
+   "tilt": "triangle"
+  },
+  "bool": {
+   "hue": true,
+   "shape": true,
+   "eyes": true,
+   "mouth": true,
+   "expression": true,
+   "tilt": false
+  },
+  "jitter": {
+   "hue": -0.11839570617303252,
+   "shape": -0.09826909401454031,
+   "eyes": -0.044167681597173214,
+   "mouth": -0.02841604291461408,
+   "expression": -0.15108885033987463,
+   "tilt": 0.03793003526516259
+  }
+ },
+ {
+  "seed": "日本語",
+  "base": {
+   "hue": 0.7762340207118541,
+   "shape": 0.039473693585023284,
+   "eyes": 0.09406439191661775,
+   "mouth": 0.33497331268154085,
+   "expression": 0.6455583302304149,
+   "tilt": 0.37692619883455336
+  },
+  "num": {
+   "hue": 0.7209872165694833,
+   "shape": 0.13157895486801863,
+   "eyes": 0.1752515135332942,
+   "mouth": 0.3679786501452327,
+   "expression": 0.6164466641843319,
+   "tilt": 0.40154095906764276
+  },
+  "int": {
+   "hue": 8,
+   "shape": 1,
+   "eyes": 1,
+   "mouth": 4,
+   "expression": 7,
+   "tilt": 4
+  },
+  "pick": {
+   "hue": "star",
+   "shape": "round",
+   "eyes": "round",
+   "mouth": "square",
+   "expression": "triangle",
+   "tilt": "square"
+  },
+  "bool": {
+   "hue": false,
+   "shape": true,
+   "eyes": true,
+   "mouth": true,
+   "expression": false,
+   "tilt": true
+  },
+  "jitter": {
+   "hue": 0.2762340207118541,
+   "shape": -0.4605263064149767,
+   "eyes": -0.40593560808338225,
+   "mouth": -0.16502668731845915,
+   "expression": 0.14555833023041487,
+   "tilt": -0.12307380116544664
+  }
+ },
+ {
+  "seed": "🎮",
+  "base": {
+   "hue": 0.8319232226349413,
+   "shape": 0.7358740367926657,
+   "eyes": 0.28901518718339503,
+   "mouth": 0.9382732878439128,
+   "expression": 0.196715306956321,
+   "tilt": 0.5822745426557958
+  },
+  "num": {
+   "hue": 0.7655385781079531,
+   "shape": 0.6886992294341325,
+   "eyes": 0.33121214974671603,
+   "mouth": 0.8506186302751303,
+   "expression": 0.2573722455650568,
+   "tilt": 0.5658196341246367
+  },
+  "int": {
+   "hue": 9,
+   "shape": 8,
+   "eyes": 3,
+   "mouth": 10,
+   "expression": 2,
+   "tilt": 6
+  },
+  "pick": {
+   "hue": "star",
+   "shape": "triangle",
+   "eyes": "square",
+   "mouth": "star",
+   "expression": "round",
+   "tilt": "triangle"
+  },
+  "bool": {
+   "hue": false,
+   "shape": false,
+   "eyes": true,
+   "mouth": false,
+   "expression": true,
+   "tilt": false
+  },
+  "jitter": {
+   "hue": 0.33192322263494134,
+   "shape": 0.23587403679266572,
+   "eyes": -0.21098481281660497,
+   "mouth": 0.43827328784391284,
+   "expression": -0.303284693043679,
+   "tilt": 0.08227454265579581
+  }
+ },
+ {
+  "seed": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+  "base": {
+   "hue": 0.40866954857483506,
+   "shape": 0.3332639017608017,
+   "eyes": 0.15484640724025667,
+   "mouth": 0.9457329099532217,
+   "expression": 0.6854468951933086,
+   "tilt": 0.8222180458251387
+  },
+  "num": {
+   "hue": 0.42693563885986807,
+   "shape": 0.3666111214086414,
+   "eyes": 0.22387712579220534,
+   "mouth": 0.8565863279625774,
+   "expression": 0.6483575161546469,
+   "tilt": 0.757774436660111
+  },
+  "int": {
+   "hue": 5,
+   "shape": 4,
+   "eyes": 2,
+   "mouth": 10,
+   "expression": 7,
+   "tilt": 9
+  },
+  "pick": {
+   "hue": "square",
+   "shape": "square",
+   "eyes": "round",
+   "mouth": "star",
+   "expression": "triangle",
+   "tilt": "star"
+  },
+  "bool": {
+   "hue": true,
+   "shape": true,
+   "eyes": true,
+   "mouth": false,
+   "expression": false,
+   "tilt": false
+  },
+  "jitter": {
+   "hue": -0.09133045142516494,
+   "shape": -0.16673609823919833,
+   "eyes": -0.34515359275974333,
+   "mouth": 0.4457329099532217,
+   "expression": 0.1854468951933086,
+   "tilt": 0.3222180458251387
+  }
+ },
+ {
+  "seed": "lab-cormoran",
+  "base": {
+   "hue": 0.36034708470106125,
+   "shape": 0.6955971163697541,
+   "eyes": 0.9670594052877277,
+   "mouth": 0.2536122265737504,
+   "expression": 0.5866124972235411,
+   "tilt": 0.48522240458987653
+  },
+  "num": {
+   "hue": 0.38827766776084904,
+   "shape": 0.6564776930958033,
+   "eyes": 0.8736475242301822,
+   "mouth": 0.30288978125900035,
+   "expression": 0.5692899977788329,
+   "tilt": 0.48817792367190127
+  },
+  "int": {
+   "hue": 4,
+   "shape": 7,
+   "eyes": 10,
+   "mouth": 3,
+   "expression": 6,
+   "tilt": 5
+  },
+  "pick": {
+   "hue": "square",
+   "shape": "triangle",
+   "eyes": "star",
+   "mouth": "square",
+   "expression": "triangle",
+   "tilt": "square"
+  },
+  "bool": {
+   "hue": true,
+   "shape": false,
+   "eyes": false,
+   "mouth": true,
+   "expression": false,
+   "tilt": true
+  },
+  "jitter": {
+   "hue": -0.13965291529893875,
+   "shape": 0.19559711636975408,
+   "eyes": 0.4670594052877277,
+   "mouth": -0.24638777342624962,
+   "expression": 0.08661249722354114,
+   "tilt": -0.014777595410123467
+  }
+ },
+ {
+  "seed": "donswayo@example.com",
+  "base": {
+   "hue": 0.03259033150970936,
+   "shape": 0.1845562970265746,
+   "eyes": 0.24613425508141518,
+   "mouth": 0.3565609271172434,
+   "expression": 0.6172263550106436,
+   "tilt": 0.6474490230903029
+  },
+  "num": {
+   "hue": 0.1260722652077675,
+   "shape": 0.2476450376212597,
+   "eyes": 0.29690740406513216,
+   "mouth": 0.38524874169379475,
+   "expression": 0.5937810840085149,
+   "tilt": 0.6179592184722423
+  },
+  "int": {
+   "hue": 1,
+   "shape": 2,
+   "eyes": 3,
+   "mouth": 4,
+   "expression": 7,
+   "tilt": 7
+  },
+  "pick": {
+   "hue": "round",
+   "shape": "round",
+   "eyes": "round",
+   "mouth": "square",
+   "expression": "triangle",
+   "tilt": "triangle"
+  },
+  "bool": {
+   "hue": true,
+   "shape": true,
+   "eyes": true,
+   "mouth": true,
+   "expression": false,
+   "tilt": false
+  },
+  "jitter": {
+   "hue": -0.46740966849029064,
+   "shape": -0.3154437029734254,
+   "eyes": -0.2538657449185848,
+   "mouth": -0.1434390728827566,
+   "expression": 0.1172263550106436,
+   "tilt": 0.14744902309030294
+  }
+ }
+]

@@ -1,4 +1,4 @@
-# blobatar-py
+# blobatar
 
 Python port of **[blobatar](https://github.com/Alain00/blobatar)** — deterministic
 geometric avatars generated from any string.
@@ -41,6 +41,14 @@ Documented in `src/blobatar/hash.py`, because they are not obvious:
    produce a different avatar.
 3. **`trim()` and `strip()` do not remove the same set.** JS strips U+FEFF and
    Python does not; Python strips U+0085 and JS does not.
+
+## Install
+
+```bash
+pip install blobatar
+```
+
+> Not published yet. See **Status** below.
 
 ## Status
 
