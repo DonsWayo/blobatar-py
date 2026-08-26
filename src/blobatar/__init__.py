@@ -7,6 +7,10 @@ Upstream: https://github.com/Alain00/blobatar (MIT, Copyright (c) 2026 Alain)
 """
 
 from .hash import normalize_seed, seed_state, stream
+from .render import make_blobatar, BlobatarOptions
+from .blob import style
 
-__all__ = ["normalize_seed", "seed_state", "stream"]
-__version__ = "0.0.1"
+blobatar = make_blobatar(style)
+
+__all__ = ["blobatar", "normalize_seed", "seed_state", "stream", "BlobatarOptions"]
+__version__ = "0.1.0"
