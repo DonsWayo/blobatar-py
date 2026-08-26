@@ -1,0 +1,26 @@
+[project]
+name = "blobatar-py"
+version = "0.0.1"
+description = "Python port of blobatar — deterministic geometric avatars from any string"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "DonsWayo" }]
+keywords = ["avatar", "identicon", "deterministic", "svg"]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Multimedia :: Graphics",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/DonsWayo/blobatar-py"
+Upstream = "https://github.com/Alain00/blobatar"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/blobatar"]
