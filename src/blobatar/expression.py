@@ -96,8 +96,17 @@ except ImportError:
     }
 
     def r3(v: float) -> str:
-        """Three decimals, which is what every emitted number here rounds to."""
-        s = str(round(v * 1000) / 1000)
+        """Three decimals, matching JavaScript's String() behavior.
+
+        JavaScript's String(round(v * 1000) / 1000) omits the decimal point
+        for whole numbers. Python needs explicit handling to match this.
+        """
+        rounded = round(v * 1000) / 1000
+        if rounded == int(rounded):
+            # Whole number: return without decimal point
+            return str(int(rounded))
+        # Keep decimal representation
+        s = str(rounded)
         if s == "-0":
             return "0"
         return s

@@ -1,0 +1,425 @@
+[
+  {
+    "expr": "idle",
+    "pose": {
+      "esx": 1,
+      "esy": 1,
+      "tilt": 0,
+      "edy": 0,
+      "edx": 0,
+      "esx2": 0,
+      "esy2": 0,
+      "tilt2": 0,
+      "edy2": 0,
+      "lock": 0,
+      "heat": 0,
+      "shake": 0,
+      "rock": 0,
+      "bdy": 0
+    },
+    "vars": {}
+  },
+  {
+    "expr": "happy",
+    "pose": {
+      "esx": 1.72,
+      "esy": 0.3,
+      "tilt": 8,
+      "edy": -1.5,
+      "edx": 1.5,
+      "esx2": 0.08,
+      "esy2": 0.05,
+      "tilt2": -16,
+      "edy2": 0,
+      "lock": 1,
+      "heat": 0,
+      "shake": 0,
+      "rock": 0,
+      "bdy": -2.2
+    },
+    "vars": {
+      "--mo-esx": "1.72",
+      "--mo-esy": "0.3",
+      "--mo-tilt": "8",
+      "--mo-edy": "-1.5",
+      "--mo-edx": "1.5",
+      "--mo-esx2": "0.08",
+      "--mo-esy2": "0.05",
+      "--mo-tilt2": "-16",
+      "--mo-lock": "1",
+      "--mo-bdy": "-2.2"
+    }
+  },
+  {
+    "expr": "sad",
+    "pose": {
+      "esx": 0.6,
+      "esy": 0.56,
+      "tilt": 26,
+      "edy": 3.6,
+      "edx": 1.9,
+      "esx2": -0.05,
+      "esy2": -0.07,
+      "tilt2": -7,
+      "edy2": 0,
+      "lock": 1,
+      "heat": 0,
+      "shake": 0,
+      "rock": 0,
+      "bdy": 2.6
+    },
+    "vars": {
+      "--mo-esx": "0.6",
+      "--mo-esy": "0.56",
+      "--mo-tilt": "26",
+      "--mo-edy": "3.6",
+      "--mo-edx": "1.9",
+      "--mo-esx2": "-0.05",
+      "--mo-esy2": "-0.07",
+      "--mo-tilt2": "-7",
+      "--mo-lock": "1",
+      "--mo-bdy": "2.6"
+    }
+  },
+  {
+    "expr": "mad",
+    "pose": {
+      "esx": 1.85,
+      "esy": 0.26,
+      "tilt": -33,
+      "edy": 0.4,
+      "edx": 0.6,
+      "esx2": 0,
+      "esy2": -0.03,
+      "tilt2": 5,
+      "edy2": 0,
+      "lock": 1,
+      "heat": 0.62,
+      "shake": 0.55,
+      "rock": 0,
+      "bdy": 0.8
+    },
+    "vars": {
+      "--mo-esx": "1.85",
+      "--mo-esy": "0.26",
+      "--mo-tilt": "-33",
+      "--mo-edy": "0.4",
+      "--mo-edx": "0.6",
+      "--mo-esy2": "-0.03",
+      "--mo-tilt2": "5",
+      "--mo-lock": "1",
+      "--mo-shake": "0.55",
+      "--mo-bdy": "0.8"
+    }
+  },
+  {
+    "expr": "surprised",
+    "pose": {
+      "esx": 1.34,
+      "esy": 1.2,
+      "tilt": -6,
+      "edy": -1.05,
+      "edx": 0.5,
+      "esx2": 0.05,
+      "esy2": 0.07,
+      "tilt2": 3,
+      "edy2": 0,
+      "lock": 1,
+      "heat": 0,
+      "shake": 0,
+      "rock": 0,
+      "bdy": -1.4
+    },
+    "vars": {
+      "--mo-esx": "1.34",
+      "--mo-esy": "1.2",
+      "--mo-tilt": "-6",
+      "--mo-edy": "-1.05",
+      "--mo-edx": "0.5",
+      "--mo-esx2": "0.05",
+      "--mo-esy2": "0.07",
+      "--mo-tilt2": "3",
+      "--mo-lock": "1",
+      "--mo-bdy": "-1.4"
+    }
+  },
+  {
+    "expr": "wink",
+    "pose": {
+      "esx": 1.32,
+      "esy": 0.76,
+      "tilt": 5,
+      "edy": -0.6,
+      "edx": 0.8,
+      "esx2": 0.26,
+      "esy2": -0.56,
+      "tilt2": -11,
+      "edy2": 0,
+      "lock": 1,
+      "heat": 0,
+      "shake": 0,
+      "rock": 0,
+      "bdy": -1.1
+    },
+    "vars": {
+      "--mo-esx": "1.32",
+      "--mo-esy": "0.76",
+      "--mo-tilt": "5",
+      "--mo-edy": "-0.6",
+      "--mo-edx": "0.8",
+      "--mo-esx2": "0.26",
+      "--mo-esy2": "-0.56",
+      "--mo-tilt2": "-11",
+      "--mo-lock": "1",
+      "--mo-bdy": "-1.1"
+    }
+  },
+  {
+    "expr": "sleepy",
+    "pose": {
+      "esx": 1.14,
+      "esy": 0.22,
+      "tilt": 0,
+      "edy": 2.4,
+      "edx": 0.3,
+      "esx2": -0.04,
+      "esy2": 0.03,
+      "tilt2": 4,
+      "edy2": 0,
+      "lock": 1,
+      "heat": 0,
+      "shake": 0,
+      "rock": 0,
+      "bdy": 1.2
+    },
+    "vars": {
+      "--mo-esx": "1.14",
+      "--mo-esy": "0.22",
+      "--mo-edy": "2.4",
+      "--mo-edx": "0.3",
+      "--mo-esx2": "-0.04",
+      "--mo-esy2": "0.03",
+      "--mo-tilt2": "4",
+      "--mo-lock": "1",
+      "--mo-bdy": "1.2"
+    }
+  },
+  {
+    "expr": "smug",
+    "pose": {
+      "esx": 1.3,
+      "esy": 0.42,
+      "tilt": 18,
+      "edy": -0.5,
+      "edx": 0.5,
+      "esx2": 0.06,
+      "esy2": -0.06,
+      "tilt2": -36,
+      "edy2": 0,
+      "lock": 1,
+      "heat": 0,
+      "shake": 0,
+      "rock": 0,
+      "bdy": -1
+    },
+    "vars": {
+      "--mo-esx": "1.3",
+      "--mo-esy": "0.42",
+      "--mo-tilt": "18",
+      "--mo-edy": "-0.5",
+      "--mo-edx": "0.5",
+      "--mo-esx2": "0.06",
+      "--mo-esy2": "-0.06",
+      "--mo-tilt2": "-36",
+      "--mo-lock": "1",
+      "--mo-bdy": "-1"
+    }
+  },
+  {
+    "expr": "unsure",
+    "pose": {
+      "esx": 0.95,
+      "esy": 1.02,
+      "tilt": 4,
+      "edy": -0.2,
+      "edx": 0.3,
+      "esx2": 0.24,
+      "esy2": -0.44,
+      "tilt2": -18,
+      "edy2": 0,
+      "lock": 1,
+      "heat": 0,
+      "shake": 0,
+      "rock": 0,
+      "bdy": 0
+    },
+    "vars": {
+      "--mo-esx": "0.95",
+      "--mo-esy": "1.02",
+      "--mo-tilt": "4",
+      "--mo-edy": "-0.2",
+      "--mo-edx": "0.3",
+      "--mo-esx2": "0.24",
+      "--mo-esy2": "-0.44",
+      "--mo-tilt2": "-18",
+      "--mo-lock": "1"
+    }
+  },
+  {
+    "expr": "scared",
+    "pose": {
+      "esx": 0.78,
+      "esy": 0.96,
+      "tilt": -12,
+      "edy": -1.5,
+      "edx": -0.8,
+      "esx2": -0.04,
+      "esy2": 0.05,
+      "tilt2": 4,
+      "edy2": 0,
+      "lock": 1,
+      "heat": 0,
+      "shake": 0.35,
+      "rock": 0,
+      "bdy": -0.6
+    },
+    "vars": {
+      "--mo-esx": "0.78",
+      "--mo-esy": "0.96",
+      "--mo-tilt": "-12",
+      "--mo-edy": "-1.5",
+      "--mo-edx": "-0.8",
+      "--mo-esx2": "-0.04",
+      "--mo-esy2": "0.05",
+      "--mo-tilt2": "4",
+      "--mo-lock": "1",
+      "--mo-shake": "0.35",
+      "--mo-bdy": "-0.6"
+    }
+  },
+  {
+    "expr": "love",
+    "pose": {
+      "esx": 0.86,
+      "esy": 1.28,
+      "tilt": -14,
+      "edy": -0.5,
+      "edx": -0.35,
+      "esx2": 0.05,
+      "esy2": 0.06,
+      "tilt2": 6,
+      "edy2": 0,
+      "lock": 1,
+      "heat": 0.6,
+      "shake": 0,
+      "rock": 0,
+      "bdy": -1.6
+    },
+    "vars": {
+      "--mo-esx": "0.86",
+      "--mo-esy": "1.28",
+      "--mo-tilt": "-14",
+      "--mo-edy": "-0.5",
+      "--mo-edx": "-0.35",
+      "--mo-esx2": "0.05",
+      "--mo-esy2": "0.06",
+      "--mo-tilt2": "6",
+      "--mo-lock": "1",
+      "--mo-bdy": "-1.6"
+    }
+  },
+  {
+    "expr": "shy",
+    "pose": {
+      "esx": 0.62,
+      "esy": 0.5,
+      "tilt": 10,
+      "edy": 1.4,
+      "edx": -0.2,
+      "esx2": -0.05,
+      "esy2": -0.04,
+      "tilt2": -8,
+      "edy2": 0,
+      "lock": 1,
+      "heat": 0.55,
+      "shake": 0,
+      "rock": 0,
+      "bdy": 0.9
+    },
+    "vars": {
+      "--mo-esx": "0.62",
+      "--mo-esy": "0.5",
+      "--mo-tilt": "10",
+      "--mo-edy": "1.4",
+      "--mo-edx": "-0.2",
+      "--mo-esx2": "-0.05",
+      "--mo-esy2": "-0.04",
+      "--mo-tilt2": "-8",
+      "--mo-lock": "1",
+      "--mo-bdy": "0.9"
+    }
+  },
+  {
+    "expr": "sick",
+    "pose": {
+      "esx": 1.25,
+      "esy": 0.34,
+      "tilt": 20,
+      "edy": 1.8,
+      "edx": 0.8,
+      "esx2": 0.05,
+      "esy2": -0.05,
+      "tilt2": -6,
+      "edy2": 0,
+      "lock": 1,
+      "heat": 0.6,
+      "shake": 0.18,
+      "rock": 0,
+      "bdy": 1.4
+    },
+    "vars": {
+      "--mo-esx": "1.25",
+      "--mo-esy": "0.34",
+      "--mo-tilt": "20",
+      "--mo-edy": "1.8",
+      "--mo-edx": "0.8",
+      "--mo-esx2": "0.05",
+      "--mo-esy2": "-0.05",
+      "--mo-tilt2": "-6",
+      "--mo-lock": "1",
+      "--mo-shake": "0.18",
+      "--mo-bdy": "1.4"
+    }
+  },
+  {
+    "expr": "thinking",
+    "pose": {
+      "esx": 1.15,
+      "esy": 0.62,
+      "tilt": 0,
+      "edy": 4.2,
+      "edx": 0.4,
+      "esx2": 0.02,
+      "esy2": 0.06,
+      "tilt2": 0,
+      "edy2": -8.4,
+      "lock": 1,
+      "heat": 0,
+      "shake": 0,
+      "rock": 0.8,
+      "bdy": -0.4
+    },
+    "vars": {
+      "--mo-esx": "1.15",
+      "--mo-esy": "0.62",
+      "--mo-edy": "4.2",
+      "--mo-edx": "0.4",
+      "--mo-esx2": "0.02",
+      "--mo-esy2": "0.06",
+      "--mo-edy2": "-8.4",
+      "--mo-lock": "1",
+      "--mo-rock": "0.8",
+      "--mo-bdy": "-0.4"
+    }
+  }
+]

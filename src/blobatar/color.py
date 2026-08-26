@@ -13,6 +13,8 @@ sRGB luminance instead of assumed from OKLab lightness, which drifts by up to
 """
 
 import math
+
+from ._js import js_cbrt, js_hypot
 from dataclasses import dataclass
 from typing import Tuple, Dict, List, Literal
 
@@ -54,12 +56,6 @@ def _js_round(x: float) -> int:
     return math.floor(x + 0.5)
 
 
-def _cbrt(x: float) -> float:
-    """Cube root that handles negative numbers correctly.
-
-    Python's x ** (1/3) fails on negative x; use math.copysign to preserve sign.
-    """
-    return math.copysign(abs(x) ** (1 / 3), x)
 
 
 def _to_linear(color: Oklch) -> Tuple[float, float, float]:
@@ -195,15 +191,15 @@ def from_hex(hex_str: str) -> Oklch:
     g = linearize(g_byte)
     b = linearize(b_byte)
 
-    l = _cbrt(0.4122214708 * r + 0.5363325363 * g + 0.0514459929 * b)
-    m = _cbrt(0.2119034982 * r + 0.6806995451 * g + 0.1073969566 * b)
-    s = _cbrt(0.0883024619 * r + 0.2817188376 * g + 0.6299787005 * b)
+    l = js_cbrt(0.4122214708 * r + 0.5363325363 * g + 0.0514459929 * b)
+    m = js_cbrt(0.2119034982 * r + 0.6806995451 * g + 0.1073969566 * b)
+    s = js_cbrt(0.0883024619 * r + 0.2817188376 * g + 0.6299787005 * b)
 
     A = 1.9779984951 * l - 2.428592205 * m + 0.4505937099 * s
     B = 0.0259040371 * l + 0.7827717662 * m - 0.808675766 * s
 
     l_val = 0.2104542553 * l + 0.793617785 * m - 0.0040720468 * s
-    c_val = math.hypot(A, B)
+    c_val = js_hypot(A, B)
     h_val = (math.atan2(B, A) * 180) / math.pi
 
     return Oklch(l_val, c_val, h_val)
@@ -223,7 +219,7 @@ def mix(a: Oklch, b: Oklch, t: float) -> Oklch:
     by = b.c * math.sin(rad(b.h))
     x = ax + (bx - ax) * t
     y = ay + (by - ay) * t
-    return Oklch(a.l + (b.l - a.l) * t, math.hypot(x, y), (math.atan2(y, x) * 180) / math.pi)
+    return Oklch(a.l + (b.l - a.l) * t, js_hypot(x, y), (math.atan2(y, x) * 180) / math.pi)
 
 
 def mix_hex(a: str, b: str, t: float) -> str:

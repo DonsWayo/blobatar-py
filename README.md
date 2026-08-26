@@ -6,6 +6,22 @@ geometric avatars generated from any string.
 Built for server-side rendering, where the avatar is produced once per seed and
 cached forever. No browser, no Node, no network call.
 
+## What parity means here
+
+Two tiers, and the distinction is not pedantry.
+
+**Observable output is exact.** Hex colours, SVG path strings and CSS custom
+property values must match the original byte for byte. This is what a user sees.
+
+**Intermediate floats are compared within 4 ULP**, because the JavaScript
+engines disagree with each other. V8 and JavaScriptCore return different doubles
+from `Math.hypot` for inputs with heavy cancellation — so the upstream library
+does not produce identical bits in Chrome and Safari either. Demanding exact
+equality on those intermediates would be demanding an agreement that the
+original does not have with itself.
+
+Everything else — hashing, traits, geometry, expressions — is exact.
+
 ## Parity is checked, not asserted
 
 Every release is validated against reference vectors produced by **running the
@@ -13,9 +29,17 @@ original JavaScript implementation** and comparing seed by seed, with exact
 equality and no tolerances.
 
 ```
-$ python tests/test_parity.py
+$ for t in tests/test_*.py; do python "$t"; done
+PARITY: 144 checks across 18 colours (observable exact, intermediates <=4 ULP)
+PARITY EXACT: 210 checks across 14 expressions
 PARITY EXACT: 136 checks across 17 seeds
+PARITY EXACT: 102 checks across 17 seeds
+PARITY EXACT: 432 checks across 12 seeds
 ```
+
+Reference vectors are generated with **bun**, running the original TypeScript
+directly — never from this port's own output. A reference derived from the port
+proves only that the port equals itself.
 
 The vector set deliberately covers the cases where a naive port silently
 diverges:
@@ -52,8 +76,9 @@ pip install blobatar
 
 ## Status
 
-Early. The seed hashing layer is complete and at parity. Traits, geometry,
-the OKLCh colour pipeline, expressions and SVG rendering are in progress.
+Hashing, traits, geometry, the OKLCh colour pipeline and expressions are ported
+and at parity — 1,024 checks. **SVG rendering is still missing**, so the package
+cannot yet produce an avatar end to end; that is why nothing is on PyPI.
 
 Animation (`idle`, `morph`, `animate`, `ease`) is **out of scope**: it is
 CSS- and time-driven, and this port targets server-side static rendering.

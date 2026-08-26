@@ -58,11 +58,15 @@ def _r2(v: float) -> str:
 
     JavaScript's Object.is(x, -0) distinguishes negative zero from positive
     zero; Python's str() does not. We must normalize -0.0 to "0" to match.
+    JavaScript's String() also strips the .0 from integer-valued floats.
     """
     s = round(v * 100) / 100
     # Check if s is exactly -0.0 (equals 0 but has negative sign bit).
     if s == 0 and math.copysign(1, s) == -1:
         return "0"
+    # Strip trailing .0 for integer-valued floats, to match JavaScript's String()
+    if s == int(s):
+        return str(int(s))
     return str(s)
 
 

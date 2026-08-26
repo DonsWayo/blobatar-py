@@ -6,5 +6,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
-        with: { python-version: "3.12" }
-      - run: python tests/test_parity.py
+        with: { python-version: "3.11" }
+      - name: Every parity suite
+        run: |
+          fail=0
+          for t in tests/test_*.py; do
+            echo "== $t"
+            python "$t" || fail=1
+          done
+          exit $fail

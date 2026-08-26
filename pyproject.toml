@@ -3,7 +3,7 @@ name = "blobatar"
 version = "0.0.1"
 description = "Python port of blobatar — deterministic geometric avatars from any string"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.11"  # math.cbrt, required for parity
 license = { file = "LICENSE" }
 authors = [{ name = "DonsWayo" }]
 keywords = ["avatar", "identicon", "deterministic", "svg"]
