@@ -22,7 +22,17 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - name: Every parity suite must pass before anything is built
-        run: for t in tests/test_*.py; do echo "== $t"; python "$t"; done
+        # Every suite runs even after one fails. Under `bash -e` the loop
+        # stopped at the first failure, so a tolerance miss in the colour
+        # intermediates hid whether the observable output still matched --
+        # which is the tier that actually gates a release.
+        run: |
+          fail=0
+          for t in tests/test_*.py; do
+            echo "== $t"
+            python "$t" || fail=1
+          done
+          exit $fail
 
   build:
     needs: parity
