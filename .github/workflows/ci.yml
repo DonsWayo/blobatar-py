@@ -1,5 +1,12 @@
 name: parity
 on: [push, pull_request]
+
+# The upstream revision the live parity job renders through. Pinned, because
+# "main" would make this job a test of whatever upstream shipped today rather
+# than of this port. 2026-09-07, packages/blobatar v2.7.0.
+env:
+  UPSTREAM_SHA: a7fd546ebede49d0a9fa638945b9e534489782a2
+
 jobs:
   parity:
     runs-on: ubuntu-latest
@@ -15,3 +22,26 @@ jobs:
             python "$t" || fail=1
           done
           exit $fail
+
+  # The suites above compare against vectors committed to this repository, which
+  # proves the port is stable but not that the vectors came from the original.
+  # This job runs the original TypeScript and diffs its SVG against ours, so the
+  # parity claim rests on the upstream implementation rather than on a fixture.
+  upstream:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+      - uses: actions/checkout@v4
+        with:
+          repository: Alain00/blobatar
+          ref: ${{ env.UPSTREAM_SHA }}
+          path: blobatar-src
+      - uses: oven-sh/setup-bun@v2
+      - name: Render through the original implementation
+        env:
+          BLOBATAR_SRC: ${{ github.workspace }}/blobatar-src
+        run: bun scripts/upstream_parity.ts > upstream.json
+      - name: Byte-compare against this port
+        run: python scripts/compare_upstream.py upstream.json
