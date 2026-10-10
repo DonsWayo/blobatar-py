@@ -9,7 +9,7 @@ These are Blobatar 2's ten silhouettes.
 
 import math
 from typing import Callable, Optional, Any, TypedDict
-from .shape import blob_path, box, polygon as polygon_shape, taper
+from .shape import Polygon, blob_path, box, polygon as polygon_shape, taper
 from .traits import Traits
 
 
@@ -51,8 +51,21 @@ class Shape(TypedDict, total=False):
 
 
 def _poly(b: Body) -> str:
-    """Path for polygon shapes."""
-    return polygon_shape(b)
+    """Path for polygon shapes.
+
+    `polygon` takes a Polygon, and the shape hooks above wrote `sides`, `rot` and
+    `round` onto the body dict, so the body is read here and handed over as the
+    primitive it now describes.
+    """
+    return polygon_shape(Polygon(
+        cx=b["cx"],
+        cy=b["cy"],
+        rx=b["rx"],
+        ry=b["ry"],
+        sides=b["sides"],
+        round=b.get("round", 0.3),
+        rot=b.get("rot", 0),
+    ))
 
 
 def _spline(b: Body) -> str:
